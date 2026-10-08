@@ -9,10 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#131A16; --brass:#A8763A; --brass-light:#C9974F; --green:#0E4D39;
-  --bone:#F6F3EE; --ledger:#EBE5DA; --muted:#4A544E; --rule:#D9D1C3;
-}
+:root{--ink:#131A16;--brass:#A8763A;--brass-light:#C9974F;--green:#0E4D39;--bone:#F6F3EE;--ledger:#EBE5DA;--muted:#4A544E;--rule:#D9D1C3}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bone);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
@@ -26,144 +23,115 @@ h3{font:600 20px/1.3 "Barlow Semi Condensed",sans-serif;margin:0 0 6px;color:var
 section{padding:44px 0;border-bottom:1px solid var(--rule)}
 section:last-of-type{border-bottom:0}
 p{margin:0 0 14px}
-ul{margin:0 0 14px;padding-left:20px}
+ul,ol{margin:0 0 14px;padding-left:22px}
 li{margin:0 0 8px}
 strong{font-weight:600}
 .pull{font:400 clamp(22px,4.2vw,28px)/1.35 "Fraunces",serif;color:var(--green);border-left:3px solid var(--brass);padding:4px 0 4px 20px;margin:8px 0 22px}
 .grid{display:grid;gap:14px;grid-template-columns:1fr}
 @media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
 .card{background:#fff;border:1px solid var(--rule);border-radius:6px;padding:20px 20px 8px}
-.card .tag{font:600 12px/1 "Barlow Semi Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 10px}
+.card .tag,.example .tag{font:600 12px/1 "Barlow Semi Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 10px}
 .example{background:var(--ledger);border-radius:6px;padding:22px 22px 10px;margin:0 0 16px}
-.example .tag{font:600 12px/1 "Barlow Semi Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin:0 0 10px}
-.qa{display:grid;gap:10px;grid-template-columns:1fr;margin:6px 0 16px}
-@media(min-width:640px){.qa{grid-template-columns:1fr 1fr}}
-.qa div{border-radius:6px;padding:14px 16px;font-size:16px}
-.no{background:#fff;border:1px solid var(--rule)}
-.yes{background:#fff;border:2px solid var(--green)}
-.qa .lbl{display:block;font:600 12px/1 "Barlow Semi Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
-.no .lbl{color:var(--muted)} .yes .lbl{color:var(--green)}
+.example .tag{color:var(--green)}
+.steps{list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);margin:0}
+.steps li::before{content:counter(s);font:500 26px/1 "Fraunces",serif;color:var(--brass)}
 table{width:100%;border-collapse:collapse;font-size:16px;margin:0 0 14px}
 th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
 th{font:600 14px/1.2 "Barlow Semi Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
-.day{list-style:none;padding:0}
-.day li{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);margin:0}
-.day b{font:600 16px/1.5 "Barlow Semi Condensed",sans-serif;color:var(--brass)}
+.talk li{padding-left:4px}
 footer{background:var(--ink);color:#C9D1CC;padding:28px 0;font-size:14px}
 footer b{color:var(--bone);font-weight:500}
-@media print{header.hero{background:none;color:var(--ink)} .lede{color:var(--ink)} section{break-inside:avoid}}
+@media print{header.hero{background:none;color:var(--ink)}.lede{color:var(--ink)}section{break-inside:avoid}}
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Assay House &middot; Role outline &middot; October 2026</p>
+    <p class="eyebrow">Assay House &middot; Role description &middot; October 2026</p>
     <h1>Head of Research and Insight</h1>
-    <p class="lede">You lead the research behind every Commercial Foundation: customer interviews, market and competitor research, and the evidence of why buyers choose, hesitate or walk away. What you find is what the positioning, the message and the creative are built on.</p>
+    <p class="lede">Leads the research behind every Commercial Foundation: customer interviews, market and competitor research, and the evidence of why buyers choose, hesitate or walk away. What this person finds is what the positioning, the message and the creative are built on.</p>
   </div>
 </header>
 
 <main class="wrap">
 
 <section>
-  <h2>Why this role matters here</h2>
-  <p>Most agencies guess what a customer wants, then design something beautiful around the guess. We do it the other way round. Every client starts with a Commercial Foundation, and the heart of it is simple: <strong>the reason customers should choose a business comes from its customers.</strong> We hear it from them before anything is designed, written or advertised.</p>
-  <p class="pull">Everything the rest of the team makes stands on what you bring back from the field.</p>
-  <p>So this is not a support role. If the research is thin, the brand is a guess with good typography. If it is sharp, the copywriter, the designer and the ad buyer all know exactly what to say and to whom.</p>
-  <p>To be straight with you: this is the first time we are putting a dedicated person on it. You would be building how we do research, not slotting into a routine someone else set up.</p>
+  <h2>Why this role exists</h2>
+  <p>Every Assay House client starts with the <strong>Commercial Foundation</strong>: the work that finds what makes a business genuinely worth choosing, before anything is designed, written or advertised. Most businesses sell something that looks and sounds like their competitors. We don't copy or guess the market. We find the real reason customers choose them, and we hear it from the customers themselves.</p>
+  <p class="pull">The Foundation is only as good as the research underneath it. This role owns that research.</p>
+  <p>The answers from this role go straight into the client's positioning, their offer, the words on their website and the ideas behind their campaigns. When the research is sharp, everyone after it knows exactly what to say and to whom.</p>
 </section>
 
 <section>
-  <h2>What you will actually do</h2>
+  <h2>Where the role sits</h2>
+  <ul>
+    <li><strong>Reports to Tarryn</strong>, Head of Marketing and Growth, who turns the findings into positioning and strategy.</li>
+    <li><strong>Works with Client Services</strong>, who introduce the client and line up the people to speak to.</li>
+    <li><strong>Hands findings to Copy and Design</strong>, who use customers' own words and reasons in the work.</li>
+    <li><strong>Works alongside our AI tools.</strong> Much of the desk research, transcription and first drafts are done with AI. This role brings what AI can't: talking to real people, noticing what they really mean, and judging what is true.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>What the role involves</h2>
   <div class="grid two">
-    <div class="card"><p class="tag">Talk to people</p><h3>Customer interviews and field surveys</h3><p>Short, structured conversations with customers, would-be customers, staff and people who said no. In person, on the phone or on a video call. Most of them ten minutes or less.</p></div>
-    <div class="card"><p class="tag">Look around</p><h3>Market and competitor research</h3><p>Who else is out there, what they promise, what they charge, what their customers complain about in reviews, and where the gap is.</p></div>
-    <div class="card"><p class="tag">Make sense of it</p><h3>Turn answers into insight</h3><p>Group what people said, count it, pull out the exact phrases they use, and say plainly how sure we are. "Seven of twelve said..." beats "people feel...".</p></div>
-    <div class="card"><p class="tag">Hand it on</p><h3>Feed the team</h3><p>Write up findings so strategy, copy and design can use them the same week. Your quotes often end up as the headline, word for word.</p></div>
+    <div class="card"><p class="tag">Talk to people</p><h3>Customer interviews</h3><p>For each Foundation: interviews with the client's customers, people who chose a competitor, people who walked away, and sometimes their staff. In person, by phone or on a video call.</p></div>
+    <div class="card"><p class="tag">Look around</p><h3>Market and competitor research</h3><p>Who the client competes with, what each one promises, what they charge, what their customers praise and complain about in reviews, and where the gap is.</p></div>
+    <div class="card"><p class="tag">Go out</p><h3>Field research</h3><p>Short, friendly conversations with the public where a client's buyers are found: shops, venues, events, car parks. Recorded on a phone, with permission.</p></div>
+    <div class="card"><p class="tag">Make sense of it</p><h3>Turn it into insight</h3><p>Group and count what people said, keep their exact words, and say plainly how sure we are. "Seven of ten said..." rather than "people feel...".</p></div>
+    <div class="card"><p class="tag">Keep us honest</p><h3>The evidence behind every claim</h3><p>Keep a record of where each finding came from, and check that anything a client wants to say publicly ("the fastest", "the first") can actually be backed up.</p></div>
+    <div class="card"><p class="tag">Share it</p><h3>Present the findings</h3><p>Explain what was found to Tarryn, the team and sometimes the client, in plain language, with the customer quotes that make it real.</p></div>
   </div>
-  <p style="margin-top:18px">Alongside that, the careful part of the job:</p>
-  <ul>
-    <li><strong>Consent, kept natural.</strong> People are only included once they are happy to chat, nobody under 18 takes part, and nothing is recorded unless they say yes. It should feel like a friendly conversation, never a form.</li>
-    <li><strong>Records that we can use later.</strong> How long each conversation took, and every "no thanks" with the reason they gave. That tells us how long research really takes, so we can quote it properly.</li>
-    <li><strong>Keeping people's details safe.</strong> Names and numbers are personal information under POPIA. You will sign a short confidentiality agreement with us before you collect any.</li>
-  </ul>
+  <p style="margin-top:18px"><strong>And the care that comes with it:</strong> asking permission properly, keeping people's details and recordings private under POPIA, and never letting research turn into selling.</p>
 </section>
 
 <section>
-  <h2>Three examples of the work</h2>
+  <h2>How research fits into a Foundation</h2>
+  <ol class="steps">
+    <li><span><strong>The brief.</strong> What the client sells, who buys, and the decision ahead of them. Sets what we need to learn.</span></li>
+    <li><span><strong>Desk research.</strong> The market, competitors, reviews and anything already written about the client's buyers.</span></li>
+    <li><span><strong>Interviews.</strong> Real conversations with customers and lost prospects about what they actually did and why.</span></li>
+    <li><span><strong>The findings.</strong> Why buyers choose, hesitate or walk away, in their own words, with how sure we are.</span></li>
+    <li><span><strong>Into the Foundation Book.</strong> The findings shape the positioning, the offer, the message and the 90-day plan.</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Examples of the work</h2>
 
   <div class="example">
-    <p class="tag">Example 1 &middot; Starting this month</p>
-    <h3>Bonga: tipping for car guards and other informal workers</h3>
-    <p>Bonga is a new way to tip people like car guards, petrol attendants and golf caddies without cash, built so the worker does not need a bank account. Before we build the brand, we need to hear from the people who would use it.</p>
-    <p><strong>Who you would talk to, anywhere from George to Plett:</strong> 20 to 30 car guards, 20 to 25 people who tip car guards, and around 10 to 15 each of petrol attendants, forecourt customers, golf caddies and golfers.</p>
-    <p><strong>What we need to learn:</strong> how often people tip now and how much, what stops them (often simply "I had no change"), how the workers feel about being tipped digitally, and whether anyone already uses something similar.</p>
-  </div>
-
-  <div class="example">
-    <p class="tag">Example 2 &middot; Starting this month</p>
-    <h3>QR-TIP: tipping in hotels, lodges, restaurants and spas</h3>
-    <p>QR-TIP lets guests tip staff by scanning a code, with the money going straight to the staff member. We need the view from both sides of the counter.</p>
-    <p><strong>Who you would talk to, across four markets</strong> (restaurants, salons and spas, game lodges, hotels): for each, roughly 10 to 15 staff, 6 to 8 owners or managers, and 20 guests.</p>
-    <p><strong>What we need to learn:</strong> how tips reach staff today, where they get lost or held back, what owners worry about, and whether guests ever leave without tipping because they have no cash.</p>
+    <p class="tag">Example 1 &middot; "We get leads, but they don't buy"</p>
+    <p>A client has plenty of enquiries and too few signed deals. You speak to a few prospects who said no, a handful of current clients (including one who left) and some live prospects. Often the answer is something the business never suspected, such as buyers not understanding what they get in the first month. That becomes the new pitch and the follow-up.</p>
   </div>
 
   <div class="example">
-    <p class="tag">Example 3 &middot; A typical client</p>
-    <h3>"We get leads, but they don't buy"</h3>
-    <p>A business comes to us with plenty of enquiries and too few signed deals. Instead of rewriting their website on a hunch, you call two or three prospects who said no, a few current clients (a busy one, a quiet one, and one who left) and some live prospects.</p>
-    <p>What they tell you becomes the new pitch, the sales scripts and the follow-up. Often the answer is something the business never suspected, like buyers not understanding what they get in the first month.</p>
+    <p class="tag">Example 2 &middot; A product that looks like everyone else's</p>
+    <p>A client sells something with many lookalikes. You read through hundreds of competitors' customer reviews and find the complaint that keeps coming up and that nobody solves. Then you check it in interviews. That complaint often becomes the client's strongest reason to be chosen.</p>
+  </div>
+
+  <div class="example">
+    <p class="tag">Example 3 &middot; Field research for new products</p>
+    <p>Two new tipping products are in development within the group: one for car guards, petrol attendants and caddies, one for hotel, lodge, restaurant and spa staff. Before either is branded, someone has to go out between George and Plett and hear from workers, owners and the people who tip them. Short conversations, recorded with permission, on a phone page we have already built.</p>
+  </div>
+
+  <div class="example">
+    <p class="tag">Example 4 &middot; Can we say that?</p>
+    <p>A client wants their website to say they are "the most trusted" in their area. You find out what proof exists, whether customers actually say it, and suggest wording that is both true and strong.</p>
   </div>
 </section>
 
 <section>
-  <h2>What a good question looks like</h2>
-  <p>People are poor at predicting what they would do and very good at remembering what they did. So we ask about the last real time, never about a made-up future.</p>
-  <div class="qa">
-    <div class="no"><span class="lbl">Avoid</span>"Would you use an app to tip car guards?"</div>
-    <div class="yes"><span class="lbl">Ask instead</span>"Think about the last time you parked at a shopping centre. Did you tip the car guard? What happened?"</div>
-    <div class="no"><span class="lbl">Avoid</span>"How much would you pay for this?"</div>
-    <div class="yes"><span class="lbl">Ask instead</span>"What did you last tip, and how did you decide on that amount?"</div>
-    <div class="no"><span class="lbl">Avoid</span>"Don't you think tipping by phone is easier?"</div>
-    <div class="yes"><span class="lbl">Ask instead</span>"Has there been a time you wanted to tip but couldn't? Tell me about it."</div>
-  </div>
-  <p>Then you listen, and write down their words exactly as they said them. "I never have coins on me anymore" is worth more to us than a neat summary.</p>
-</section>
-
-<section>
-  <h2>What a field day might look like</h2>
-  <ul class="day">
-    <li><b>08:30</b><span>Petrol station before the morning rush is over. Three quick conversations with customers after they have paid, two with attendants when it is quiet.</span></li>
-    <li><b>10:30</b><span>Shopping centre car park. Car guards first, always away from any supervisor. Then shoppers once they have parked and walked away from the guard.</span></li>
-    <li><b>13:00</b><span>A hotel. Ask at the front desk for ten minutes with the manager, at a time that suits them. Catch staff on their break, out of earshot of management.</span></li>
-    <li><b>15:00</b><span>Golf club. Caddies between rounds, golfers in the clubhouse.</span></li>
-    <li><b>17:00</b><span>Quick notes: anything surprising, any pattern starting to show, how many said no and why.</span></li>
-  </ul>
-  <p>Every answer goes into a questionnaire on your phone. Short answers are tapped in. For the longer answers you press the microphone, read the question, let them talk, and press again to save the recording against that question. The time each conversation takes is recorded automatically.</p>
-</section>
-
-<section>
-  <h2>The ground rules</h2>
-  <ul>
-    <li><strong>Research is never selling.</strong> You do not pitch the product during a conversation, and you do not need to name it.</li>
-    <li><strong>No one under 18.</strong></li>
-    <li><strong>Workers are protected.</strong> Staff and workers are spoken to away from their managers, and nothing they say is ever linked to them in anything their employer sees.</li>
-    <li><strong>No guilt.</strong> Nobody is made to feel bad for not tipping, or for saying no to you.</li>
-    <li><strong>Fees and partners stay private.</strong> If someone asks what it costs or who is behind it, you say it is early research and the details are not public yet.</li>
-    <li><strong>Ten minutes means ten minutes.</strong> If someone is busy, you stop, thank them, and move on.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>What good looks like in your first month</h2>
+  <h2>What good looks like</h2>
   <table>
-    <thead><tr><th>Measure</th><th>What we are looking for</th></tr></thead>
+    <thead><tr><th>Measure</th><th>What we look for</th></tr></thead>
     <tbody>
-      <tr><td>Reach</td><td>Steady progress towards the numbers in the two examples above, spread across the towns and place types rather than all in one spot.</td></tr>
-      <tr><td>Quality</td><td>Real quotes in people's own words, and stories about what they actually did.</td></tr>
-      <tr><td>Clean records</td><td>Consent captured properly every time, timings recorded, declines counted.</td></tr>
-      <tr><td>Insight</td><td>A short write-up that tells us something we did not know, and says how sure we are.</td></tr>
+      <tr><td>Real voices</td><td>Findings built on what people actually did and said, with their exact words, not opinions or guesses.</td></tr>
+      <tr><td>Honesty</td><td>Lukewarm and negative answers reported alongside the good ones, and a clear "how sure we are".</td></tr>
+      <tr><td>Useful</td><td>Something the team did not know before, that changes what we say or who we say it to.</td></tr>
+      <tr><td>On time</td><td>Research finished in time for the Foundation, with notes written up within a day of each conversation.</td></tr>
+      <tr><td>Care</td><td>Permission asked properly, details kept private, nobody pressured.</td></tr>
     </tbody>
   </table>
 </section>
@@ -171,18 +139,32 @@ footer b{color:var(--bone);font-weight:500}
 <section>
   <h2>Who does well in this role</h2>
   <ul>
-    <li>You are genuinely curious about people and comfortable walking up to a stranger.</li>
-    <li>You can make anyone feel at ease, from a car guard to a lodge owner, and you can switch language when it helps.</li>
-    <li>You listen more than you talk, and you notice the thing someone said almost in passing.</li>
-    <li>You are organised: you keep track of who you spoke to, what they agreed to, and what is still outstanding.</li>
-    <li>You can explain what you found in plain words, without dressing it up.</li>
+    <li>Genuinely curious about people, and comfortable starting a conversation with a stranger.</li>
+    <li>Puts anyone at ease, from a car guard to a company owner, and can switch language when it helps.</li>
+    <li>Listens more than they talk, and notices the thing someone says almost in passing.</li>
+    <li>Organised: keeps track of who was spoken to, what they agreed to, and what is still outstanding.</li>
+    <li>Writes and speaks plainly, without dressing findings up.</li>
+    <li>Comfortable using a phone, AI tools and simple online forms as part of the work.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>To talk through together</h2>
+  <ul class="talk">
+    <li>Your experience so far with interviews, surveys, research or talking to customers.</li>
+    <li>A time you got someone to open up who didn't want to talk at first.</li>
+    <li>Which languages you are comfortable working in.</li>
+    <li>Getting around: transport between George and Plett for field days.</li>
+    <li>When you are available, and how you like to work: in the field, at a desk, or both.</li>
+    <li>How you feel about recording conversations and working with personal information carefully.</li>
+    <li>What you would want to learn or grow into in this role.</li>
   </ul>
 </section>
 
 </main>
 
 <footer>
-  <div class="wrap"><b>Assay House</b> &middot; Brand strategy and creative agency &middot; assayhouse.co.za<br>Prepared for a role conversation. Not a contract of employment.</div>
+  <div class="wrap"><b>Assay House</b> &middot; Brand strategy and creative agency &middot; assayhouse.co.za<br>Role description for discussion. Not a contract or an offer of employment.</div>
 </footer>
 
 </body>
