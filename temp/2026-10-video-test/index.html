@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Video model test 27/10</title>
+<style>
+body{margin:0;background:#131A16;color:#F6F3EE;font-family:Arial,sans-serif}
+h1{font-size:22px;margin:20px 24px 4px}p{margin:0 24px 16px;color:#C9974F}
+h2{font-size:18px;margin:24px 24px 10px;color:#F6F3EE}
+.row{display:flex;gap:14px;padding:0 24px;flex-wrap:wrap}
+.c{flex:1 1 220px;max-width:300px}.c video{width:100%;border-radius:4px;background:#000}
+.c img{width:100%;border-radius:4px}
+.n{font-weight:bold;margin-top:6px}.s{color:#C9974F;font-size:14px}.w{color:#9fd3b0}
+button{margin:0 24px;padding:10px 18px;font-size:16px;background:#C9974F;border:0;border-radius:4px;cursor:pointer}
+.ref{opacity:.85}
+.cr{font-size:13px;color:#F6F3EE;margin-top:3px}
+.pr{margin:0 24px 6px;padding:12px 16px;background:#1d2620;border-left:3px solid #C9974F;font-size:15px;line-height:1.5;max-width:1100px}
+.pl{margin:0 24px 4px;font-size:13px;color:#C9974F;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<h1>Video model test, 27/10/2026</h1>
+<p>Same starting picture and the same instruction for every model, 5 seconds each. Round 2 scored out of 10 by the Creative Director; round 1 out of 18, two staff scoring blind.</p>
+<button onclick="document.querySelectorAll('video').forEach(v=>{v.currentTime=0;v.play()})">Play all from the start</button>
+<h2>Round 2: hyper-real, ChatGPT wrote the prompts</h2>
+<div class="pl">Photo prompt (ChatGPT, made with ChatGPT images from the real pack photo)</div><div class="pr">Create a photorealistic 9:16 food photograph of The Gourmet Greek 500g Double Cream Strained Yoghurt on a lightly worn kitchen counter in soft window daylight. Reproduce the attached pack photo exactly: square tub, blue lid, white label, blue panel, logo, lettering, colours and proportions; invent nothing. Show the tub open, blue lid beside it. A real adult hand holds a stainless-steel spoon just above the yoghurt, ready to dip. Natural skin pores, fine hairs, creases, believable knuckles and grip. Yoghurt has dense, softly glossy folds and tiny surface irregularities, never plastic. Gentle shadows, restrained depth of field, subtle camera grain; casual food-creator photography, no beauty retouching.</div>
+<div class="pl">Video prompt (ChatGPT, same for every model)</div><div class="pr">Animate this still into one continuous five-second vertical 9:16 shot. First second: the hand lowers the spoon into the yoghurt. Next two seconds: it gently draws through the dense yoghurt, gathering one scoop. Final two seconds: it lifts the spoon a few centimetres and pauses. Thick strained yoghurt resists slightly, folds onto the spoon, separates with a short soft peak, and holds a rounded mound with minimal sag; no pouring, long strings, bouncing or jelly motion. Preserve hand anatomy, grip and spoon geometry. Tub, lid, counter, background and exact label remain fixed. Camera stays steady; no zoom or cuts. Maintain natural daylight, subtle skin movement and realistic contact shadows.</div>
+<div class="row">
+<div class="c ref"><img src="round2/still-realistic.png"><div class="n">Starting picture</div><div class="s">ChatGPT photo, real-looking hand</div></div>
+<div class="c"><video src="round2/P2-minimaxh3.mp4" muted loop playsinline controls></video><div class="n w">MiniMax H3: 8/10 WINNER</div><div class="s">most real, label perfect, tiny drips under spoon</div><div class="cr">10 credits, 2K, 5 s</div></div>
+<div class="c"><video src="round2/P2-kling40.mp4" muted loop playsinline controls></video><div class="n">Kling 4.0: 6/10</div><div class="s">label perfect, scoop huge and shiny like mousse</div><div class="cr">5 credits, 1080p, 5 s</div></div>
+<div class="c"><video src="round2/P2-seedance25.mp4" muted loop playsinline controls></video><div class="n">Seedance 2.5: 6/10</div><div class="s">best yoghurt movement, but soft and small print smudges</div><div class="cr">35 credits, 720p, 5 s</div></div>
+<div class="c"><video src="round2/P2-grok15lite.mp4" muted loop playsinline controls></video><div class="n">Grok Imagine 1.5 Lite: 4/10</div><div class="s">camera creeps in, small print rewrites itself</div><div class="cr">5 credits, 720p, 5 s</div></div>
+</div>
+<p style="margin-top:10px">Round 2 beats round 1. One fix before anything is posted: the photo misprints the side panel ("The Greeks have a secret"; the real pack says "saying").</p>
+<h2>Round 1: Product with a label</h2>
+<div class="pl">Prompt used (same for every model)</div><div class="pr">The hand slowly lowers the spoon towards the tub. The scoop of thick strained yoghurt touches the yoghurt in the tub, the hand tips the spoon, and the scoop slides off and settles into a soft mound that holds its shape. The hand lifts the empty spoon a little and stops, staying in the top right of the frame. The yoghurt is thick and does not drip, run or stretch. The tub, its label and its blue lid stay perfectly still and unchanged. The parsley and lemon behind stay still. The soft daylight stays the same. The camera is locked off and does not move. Real-time speed.</div>
+<div class="row">
+<div class="c ref"><img src="stills/s02-tub-scoop-916.png"><div class="n">Starting picture</div><div class="s">what every model was given</div></div>
+<div class="c"><video src="clips/P-minimaxh3.mp4" muted loop playsinline controls></video><div class="n w">MiniMax H3: 17 WINNER</div><div class="s">label perfect, whole action</div><div class="cr">10 credits, 2K, 5 s</div></div>
+<div class="c"><video src="clips/P-wan30.mp4" muted loop playsinline controls></video><div class="n">Wan 3.0: 13.5</div><div class="s">hand leaves at 4.5 s</div><div class="cr">30 credits, 1080p, 5 s</div></div>
+<div class="c"><video src="clips/P-kling40.mp4" muted loop playsinline controls></video><div class="n">Kling 4.0: 11.5</div><div class="s">yoghurt goes stringy at 2.5 s</div><div class="cr">5 credits, 1080p, 5 s</div></div>
+<div class="c"><video src="clips/P-gemini11.mp4" muted loop playsinline controls></video><div class="n">Gemini Omni: failed</div><div class="s">rewrote the nutrition text</div><div class="cr">18 credits, 720p, 6 s (no 5 s option)</div></div>
+</div>
+<h2>Round 1: Drawn character</h2>
+<div class="pl">Prompt used (same for every model)</div><div class="pr">Hand-drawn comic illustration with bold ink outlines, kept exactly as in the image for the whole clip. The woman frowns at her phone, then looks up from it straight into the camera and raises one eyebrow, and her mouth closes into a flat, unimpressed line. She holds that look. Her right hand keeps the phone; her left hand stays on her hip. The garage behind her stays exactly the same. The camera makes one slow, steady push-in for the whole clip and stops at head and shoulders, with her whole chin and the top of her headscarf in frame. Real-time speed.</div>
+<div class="row">
+<div class="c ref"><img src="stills/c-garage-owner-9x16.png"><div class="n">Starting picture</div><div class="s">what every model was given</div></div>
+<div class="c"><video src="clips/C-kling40.mp4" muted loop playsinline controls></video><div class="n w">Kling 4.0: 16.5 CHOSEN</div><div class="s">does the close-up, cheapest</div><div class="cr">5 credits, 1080p, 5 s</div></div>
+<div class="c"><video src="clips/C-minimaxh3.mp4" muted loop playsinline controls></video><div class="n">MiniMax H3: 17</div><div class="s">great acting, never reaches the close-up</div><div class="cr">10 credits, 2K, 5 s</div></div>
+<div class="c"><video src="clips/C-wan30.mp4" muted loop playsinline controls></video><div class="n">Wan 3.0: 12</div><div class="s">rebuilds the garage behind her</div><div class="cr">30 credits, 1080p, 5 s</div></div>
+<div class="c"><div style="aspect-ratio:9/16;background:#222;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888">refused twice</div><div class="n">Gemini Omni</div><div class="s">flagged as unsafe, credits returned</div><div class="cr">0 credits (18 refunded, twice)</div></div>
+</div>
+<p style="margin-top:24px;color:#888">163 credits used in total. Round 1: 108 (Kling 10, MiniMax 20, Gemini 18, Wan 60). Round 2: 55 (MiniMax 10, Kling 5, Seedance 35, Grok 5).</p>
+<script>document.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}))</script>
+</body></html>
